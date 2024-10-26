@@ -35,4 +35,8 @@ def compras(request):
 def upload_encomenda(request):
     ficheiro_encomendas = request.FILES['ficheiro_encomenda'].read()
 
-    return HttpResponse(ficheiro_encomendas)
+    template = loader.get_template("upload_encomenda.html")
+    context = {
+        'ficheiro_encomendas': ficheiro_encomendas,
+    }
+    return HttpResponse(template.render(context, request))
