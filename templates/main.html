@@ -6,15 +6,25 @@
         <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
         
         <style>
-            body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", cursive;}
+            h1,h2,h3,h4,h5,h6 {font-family: "Lato", cursive;}
             .store-title {
                 text-align: center;
+                background-color: #3778d8;
+                color: white;
+                padding: 5px;
+                text-align: center;
             }
+            .navbar {
+              background-color: #b7502a; /* Change navbar color */
+              margin: 0; /* Remove margin */
+              padding: 0; /* Remove padding */
+             }
 
-            .navbar-nav !important {
+            .navbar-nav{
                display: flex;
                justify-content: space-between;
              }
+             
 
             .mx-4 { margin-left: 10.5rem; margin-right: 10.5rem; }
             .footer-content {
@@ -34,6 +44,7 @@
                 gap: 15px;
                 color:#fff;
             }
+            
         </style>
     </head>
     <body>
@@ -61,8 +72,6 @@
             </div>
           </div>
         </nav>
-
-        <br/>
 
         {% block home %}
         {% endblock %}
