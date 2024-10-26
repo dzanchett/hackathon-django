@@ -9,8 +9,13 @@
           </div>
         </div>
     </div>
-    
+
     <script>
+    {#var graphData = "{{dados|safe}}";#}
+    {#console.log(graphData);#}
+    {#arr = JSON.parse(graphData)#}
+    {#console.log(arr)#}
+
     const data = [
         { year: 2010, count: 10 },
         { year: 2011, count: 20 },
@@ -20,6 +25,8 @@
         { year: 2015, count: 30 },
         { year: 2016, count: 28 },
       ];
+
+
 
       new Chart(
         document.getElementById('chart'),
