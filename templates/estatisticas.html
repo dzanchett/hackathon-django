@@ -1,5 +1,40 @@
 {% extends 'main.html' %}
 
 {% block estatisticas %}
-  <p>Estatísticas</p>
-{% endblock %} 
+  <div style="margin: 25px">
+        <div class="card mx-auto h-75" style="position: relative">
+          <div class="card-body" style="position:absolute; text-align: center; align-items: center; top: 50%; left: 50%; -ms-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%);">
+            <h5 class="card-title">Estatísticas</h5>
+               <div><canvas id="chart" width="500" height="500"></canvas></div>
+          </div>
+        </div>
+    </div>
+    
+    <script>
+    const data = [
+        { year: 2010, count: 10 },
+        { year: 2011, count: 20 },
+        { year: 2012, count: 15 },
+        { year: 2013, count: 25 },
+        { year: 2014, count: 22 },
+        { year: 2015, count: 30 },
+        { year: 2016, count: 28 },
+      ];
+
+      new Chart(
+        document.getElementById('chart'),
+        {
+          type: 'bar',
+          data: {
+            labels: data.map(row => row.year),
+            datasets: [
+              {
+                label: 'Acquisitions by year',
+                data: data.map(row => row.count)
+              }
+            ]
+          }
+        }
+      );
+  </script>
+{% endblock %}
