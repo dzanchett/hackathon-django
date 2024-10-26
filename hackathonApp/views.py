@@ -174,7 +174,7 @@ def upload_encomenda(request):
             'algodao': algodao,
             'fio': fio,
             'poliester': poliester,
-            'dia_atual': dia_atual
+            'dia_atual': str(dia_atual)
         })
 
         # Lista de compras no dia
