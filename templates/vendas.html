@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+
+{% block vendas %}
+  <div class="card" style="width: 25rem;">
+      <div class="card-body">
+        <h5 class="card-title">Upload Ficheiro Encomenda</h5>
+           <form action="/upload-encomenda" enctype="multipart/form-data" method="post">
+                <div class="mb-3">
+                  <input class="form-control" type="file" name="ficheiro_encomenda" accept=".txt" id="formFile">
+                </div>
+               <button type="submit" value="Upload" class="btn btn-primary">Carregar ficheiro</button>
+           </form>
+      </div>
+    </div>
+{% endblock %} 

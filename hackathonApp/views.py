@@ -3,8 +3,29 @@ from django.template import loader
 from rest_framework.decorators import api_view
 
 
-def index(request):
-    template = loader.get_template("index.html")
+def home(request):
+    template = loader.get_template("home.html")
+    context = {
+    }
+    return HttpResponse(template.render(context, request))
+
+
+def vendas(request):
+    template = loader.get_template("vendas.html")
+    context = {
+    }
+    return HttpResponse(template.render(context, request))
+
+
+def estisticas(request):
+    template = loader.get_template("estatisticas.html")
+    context = {
+    }
+    return HttpResponse(template.render(context, request))
+
+
+def compras(request):
+    template = loader.get_template("compras.html")
     context = {
     }
     return HttpResponse(template.render(context, request))
