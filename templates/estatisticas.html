@@ -9,8 +9,10 @@
           </div>
         </div>
     </div>
-    
+
     <script>
+    var graphData = "{{dados}}";
+    
     const data = [
         { year: 2010, count: 10 },
         { year: 2011, count: 20 },
@@ -20,6 +22,10 @@
         { year: 2015, count: 30 },
         { year: 2016, count: 28 },
       ];
+    
+      for(let i=0; i<graphData.length; i++){
+          
+      }
 
       new Chart(
         document.getElementById('chart'),
